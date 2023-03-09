@@ -1,8 +1,6 @@
 #ifndef MAZE_GENERATOR_H
 #define MAZE_GENERATOR_H
 
-#include <Array.hpp>
-#include <Dictionary.hpp>
 #include <Godot.hpp>
 #include <TileMap.hpp>
 
@@ -19,9 +17,9 @@ namespace godot {
       //Class Variables
       unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
       std::default_random_engine gen{seed};
-      godot::Dictionary configs;
+      std::map<int, std::vector<int>> configs;
       int num_dims = 2;
-      godot::Array dims;
+      std::vector<int> dims;
       std::map<std::string, int> bits_dir;
       std::map<std::vector<int>, std::string> cell_walls;
       std::vector<float> dist{1000, 1000, 100, 10, 1, 0.1, 0.01, 0.001};

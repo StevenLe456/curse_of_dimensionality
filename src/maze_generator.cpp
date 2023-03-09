@@ -31,6 +31,13 @@ MazeGenerator::~MazeGenerator() {
 }
 
 void MazeGenerator::_init() {
+  this->configs[2] = std::vector<int>{1000, 1000};
+  this->configs[3] = std::vector<int>{500, 500, 10};
+  this->configs[4] = std::vector<int>{300, 300, 10, 10};
+  this->configs[5] = std::vector<int>{150, 150, 8, 8, 8};
+  this->configs[6] = std::vector<int>{55, 55, 8, 8, 8, 8};
+  this->configs[7] = std::vector<int>{20, 20, 8, 8, 8, 8, 8};
+  this->configs[8] = std::vector<int>{8, 8, 8, 8, 8, 8, 8, 8};
   this->num_dims = 2;
   std::string in_n_out[2] = {"I", "O"};
   int counter = 0;
@@ -48,22 +55,6 @@ void MazeGenerator::_init() {
       cell_walls[dummy] = std::to_string(i) + s;
     }
   }
-  godot::File config_file;
-  godot::String path;
-  if (OS::get_singleton()->has_feature("editor")) {
-    path = ProjectSettings::get_singleton()->globalize_path("res://config.json");
-  }
-  else {
-    path = OS::get_singleton()->get_executable_path().get_base_dir().plus_file("config.json");
-  }
-  config_file.open(path, File::READ);
-  godot::String contents;
-  if (config_file.is_open()) {
-    config_file.store_string(contents);
-  }
-  config_file.close();
-  JSONParseResult* json_res = JSON::get_singleton()->parse(contents).ptr();
-  this->configs = json_res->get_result();
   this->dims = this->configs[this->num_dims];
   this->init_maze();
   this->carve_maze();
