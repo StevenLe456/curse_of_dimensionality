@@ -1,3 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://prefabs/maze_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scripts/maze.gdns" type="Script" id=2]
+
+[node name="TileMap" type="TileMap"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 320, 320 )
+format = 1
+script = ExtResource( 2 )
