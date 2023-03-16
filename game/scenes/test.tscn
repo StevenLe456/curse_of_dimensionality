@@ -8,3 +8,8 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 320, 320 )
 format = 1
 script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 2, 2 )

@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/banhmingot45/curse_of_dimensionality/godot-cpp/include/core",
+                "/home/banhmingot45/curse_of_dimensionality/godot-cpp/godot-headers",
+                "/home/banhmingot45/curse_of_dimensionality/godot-cpp/include/gen"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

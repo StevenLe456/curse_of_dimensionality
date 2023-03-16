@@ -36,6 +36,10 @@
         "type_traits": "cpp",
         "tuple": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "chrono": "cpp",
+        "ctime": "cpp",
+        "iostream": "cpp",
+        "ratio": "cpp"
     }
 }

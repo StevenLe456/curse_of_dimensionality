@@ -26,6 +26,7 @@ namespace godot {
       std::vector<int> maze;
       std::vector<int> prev_pos{num_dims, 0};
       std::vector<int> curr_pos{num_dims, 0};
+      std::map<int, int> tiles;
       //Class methods
       void init_maze();
       std::map<int, std::vector<int>> check_neighbors(std::vector<int> cell, std::vector<std::vector<int>> unvisited);
@@ -37,6 +38,7 @@ namespace godot {
       std::vector<int> add_vects(std::vector<int> arr1, std::vector<int> arr2);
       std::vector<int> subtract_vects(std::vector<int> arr1, std::vector<int> arr2);
       std::vector<int> negate_vect(std::vector<int> arr);
+      void debug_maze();
     public:
       static void _register_methods();
       MazeGenerator();
